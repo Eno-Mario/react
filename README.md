@@ -7,6 +7,6 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Exercise 2
+## Exercise 3
 
-Create a new Message component that renders a p tag with the message "What a beautiful day!". Render the new component within the Hello component.
+Can you use the Hello component more than once in the App component? What happens if you do? Can you render the Message component directly within the App component? What happens if you do? Write your answers in a comment
