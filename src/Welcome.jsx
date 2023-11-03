@@ -1,10 +1,11 @@
 import React from "react";
+import Age from "./Age";
 
 function Welcome ({name = "Mario", age} /* You can set a default value for the name prop */) { 
     return (
     <div>
         <p>Welcome, <strong>{name}</strong>!</p>
-        <p>Your age is {age}</p>
+        <Age age={age} />
     </div>
     )
 }
