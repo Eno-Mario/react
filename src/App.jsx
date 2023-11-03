@@ -12,6 +12,7 @@ function App() {
       <Welcome name="Luigi" age={18} /> {/* Render the component Welcome to App component, passing it a name prop of your choosing. */}
       <Welcome age={27}/> {/* if no name prop is passed to the Welcome component the default behavior is: undefined is displayed because the name prop is not provided. */}
       <Welcome name="John" age={20}/>
+      <Welcome age={17}/>
       <Welcome/>
     </div>
   );
