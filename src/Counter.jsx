@@ -1,21 +1,30 @@
 import { useState } from "react";
+import CounterDisplay from "./CounterDisplay";
 
-function Counter({initialCounter = 0 , increment = 1}) {
+function Counter({initialCounter = 0 , increment = 1 , decrement = 1}) {
     const [counter, setCounter] = useState(initialCounter)
 
     function handleCounterIncrement () {
         setCounter((c) => c + increment) 
-        /* when calling the "setter" function , 
-        the parameter should be a function that returns the new value based on the previous value. 
-        This is because React can perform asynchronous operations for state updates, 
-        and by using a function to calculate the new value, 
-        you can ensure that the current value is correctly captured and used for the update. */
+
+    }
+
+    function handleCounterDecrement () {
+        setCounter((c) => c - decrement) 
+
+    }
+
+    function handleCounterReset () {
+        setCounter(initialCounter) 
+
     }
 
     return (
         <div>
-            <h2>{counter}</h2>
+            <CounterDisplay count={counter}/>
             <button onClick={handleCounterIncrement}>Increment</button>
+            <button onClick={handleCounterDecrement}>Decrement</button>
+            <button onClick={handleCounterReset}>Reset</button>
         </div>
     )
 }
