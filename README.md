@@ -7,6 +7,6 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Exercise 8
+## Exercise 10
 
-Starting from the last props exercise, modify the Age component so that the "Your age is " message is rendered only if the age prop is greater than 18. Otherwise render the "You are very young!" message.
+Create an AlertClock function component that renders a button. When the button is clicked, an alert should be shown with the current time. Render the AlertClock component within the App component. Make it so that the event handler is received as a prop by the AlertClock component, instead of being implemented within the component itself. Tip: use the Date object to get the current time.

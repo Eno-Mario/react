@@ -2,8 +2,15 @@ import React from "react";
 import Hello from "./Hello";
 import Message from "./Message"; /* the import created automatically */
 import Welcome from "./Welcome";
+import AlertClock from "./AlertClock";
 
 function App() {
+  function handleShowCurrentTime () {
+    const time = new Date();
+
+    alert(`Current time is:${time.toLocaleTimeString()}`)
+  }
+
   return (
     <div>
       <Hello />
@@ -14,6 +21,7 @@ function App() {
       <Welcome name="John" age={20}/>
       <Welcome age={17}/>
       <Welcome/>
+      <AlertClock onClick={handleShowCurrentTime} />
     </div>
   );
 }
