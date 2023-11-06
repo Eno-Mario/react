@@ -5,6 +5,7 @@ import Welcome from "./Welcome";
 import AlertClock from "./AlertClock";
 import Counter from "./Counter";
 import Clock from "./Clock";
+import MouseClicker from "./MouseClicker";
 
 function App() {
   function handleShowCurrentTime () {
@@ -20,6 +21,7 @@ function App() {
       <Hello /> {/* yes we can use component Hello more than once! */}
       <Counter />
       <Clock/>
+      <MouseClicker/>
     </div>
   );
 }
