@@ -16,6 +16,10 @@ function App() {
     alert(`Current time is:${time.toLocaleTimeString()}`)
   }
 
+  function onLogin(data) {
+    console.log('Login data:', data)
+  }
+
   return (
     <div>
       <Hello />
@@ -25,7 +29,7 @@ function App() {
       <Clock/>
       <MouseClicker/>
       <InteractiveWelcome/>
-      <Login/>
+      <Login func={onLogin}/>
     </div>
   );
 }

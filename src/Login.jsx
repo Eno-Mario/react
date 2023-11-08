@@ -1,9 +1,9 @@
 import React from 'react'
 import { useState } from 'react'
 
-export default function Login() {
+export default function Login({func}) {
     const [data, setData] = useState({
-        username: 'Marrio',
+        username: '',
         password: '',
         save: false
     })
@@ -22,12 +22,18 @@ export default function Login() {
         })
     }
 
+    function handleLogin() {
+        const loginData = JSON.stringify(data);
+        func(loginData)
+    }
+
   return (
     <div>
         <input name="username" type="text" value={data.username} onChange={handleInput} />
         <input name="password" type="password" value={data.password} onChange={handleInput} />
         <label htmlFor="save">Remember me!</label>
         <input name="save" type="checkbox" checked={data.save} onChange={handleInput} />
+        <button disabled={!data.username || !data.password} onClick={handleLogin}>Login</button>
     </div>
   )
 }
