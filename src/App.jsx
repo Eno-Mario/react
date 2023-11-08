@@ -7,6 +7,7 @@ import Counter from "./Counter";
 import Clock from "./Clock";
 import MouseClicker from "./MouseClicker";
 import InteractiveWelcome from "./InteractiveWelcome";
+import Login from "./Login";
 
 function App() {
   function handleShowCurrentTime () {
@@ -24,6 +25,7 @@ function App() {
       <Clock/>
       <MouseClicker/>
       <InteractiveWelcome/>
+      <Login/>
     </div>
   );
 }
