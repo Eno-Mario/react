@@ -26,7 +26,9 @@ export default function Login({func}) {
         })
     }
 
-    function handleLogin() {
+    function handleLogin(event) {
+        event.preventDefault() // in this way we prevent the default behavior of the form element
+
         const loginData = JSON.stringify(data);
         func(loginData)
     }
@@ -35,13 +37,17 @@ export default function Login({func}) {
         setData(initialiseData())
     }
 
+
+
   return (
     <div>
-        <input name="username" type="text" value={data.username} onChange={handleInput} />
-        <input name="password" type="password" value={data.password} onChange={handleInput} />
-        <label htmlFor="save">Remember me!</label>
-        <input name="save" type="checkbox" checked={data.save} onChange={handleInput} />
-        <button disabled={!data.username || !data.password} onClick={handleLogin}>Login</button>
+        <form onSubmit={handleLogin}>
+            <input name="username" type="text" value={data.username} onChange={handleInput} />
+            <input name="password" type="password" value={data.password} onChange={handleInput} />
+            <label htmlFor="save">Remember me!</label>
+            <input name="save" type="checkbox" checked={data.save} onChange={handleInput} />
+            <button disabled={!data.username || !data.password}>Login</button>
+        </form>
         <button onClick={handleReset}>Reset</button>
     </div>
   )
