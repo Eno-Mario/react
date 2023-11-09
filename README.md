@@ -7,6 +7,6 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Exercise 24
+## Exercise 25
 
-Create a FocusableInput component that renders an input tag. As soon as the component renders, the input tag should be focused automatically.
+Using StrictMode, create a component with an effect that prints a message only when the component is mounted the first time. Use a ref to keep track of whether the component is mounted or not.
