@@ -20,10 +20,13 @@ export default function TodoList() {
         setTodos([])
     }
     
+    function handleRemove(i) {
+        setTodos(t => t.filter((el, index) => index != i))
+    }
   return (
     <div>
         <ul>
-            {todos.map((todo, index)=> <li key={index}>{todo}</li>)}
+            {todos.map((todo, index)=> <li key={index}>{todo}<button onClick={() => handleRemove(index)}>Remove</button></li>)}
         </ul>
         <form onSubmit={handleAdd}>
             <input name='newTodo' value={newTodo} type="text" onChange={handleInput}/>
