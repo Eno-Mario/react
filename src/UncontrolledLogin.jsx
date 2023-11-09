@@ -4,12 +4,15 @@ export default function UncontrolledLogin() {
     function handleSubmit(event) {
         event.preventDefault()
 
-        const formData = new FormData(event.target)
+        const username = event.target.elements.namedItem("username").value;
+        const password = event.target.elements.namedItem("password").value
+        const save = event.target.elements.namedItem("save").checked
+
 
         console.log({
-            username: formData.get("username"),
-            password: formData.get("password"),
-            save: formData.get("save") === "on" ? true : false
+            username,
+            password,
+            save
         })
     }
 
