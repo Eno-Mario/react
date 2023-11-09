@@ -12,6 +12,8 @@ import UncontrolledLogin from "./UncontrolledLogin";
 import FocusableInput from "./FocusableInput";
 import FirstMount from "./FirstMount";
 import Colors from "./Colors";
+import TodoList from "./TodoList";
+
 
 function App() {
   function handleShowCurrentTime () {
@@ -36,6 +38,7 @@ function App() {
     <div>
       <Hello />
       <Colors arr={persons}/>
+      <TodoList/>
     </div>
   );
 }
