@@ -7,6 +7,6 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Exercise 21
+## Exercise 22
 
-Use the form element to handle the form's submission, and attach the handleLogin event handler to the onSubmit event of the form element. How do you prevent the default behavior of the form element?
+Implement an UncontrolledLogin component that implements all the operations of the Login component, but does so using uncontrolled components. Attempt to access the values of the form using the DOM API by reading the event.target of the onSubmit event handler.

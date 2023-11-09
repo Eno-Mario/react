@@ -8,6 +8,7 @@ import Clock from "./Clock";
 import MouseClicker from "./MouseClicker";
 import InteractiveWelcome from "./InteractiveWelcome";
 import Login from "./Login";
+import UncontrolledLogin from "./UncontrolledLogin";
 
 function App() {
   function handleShowCurrentTime () {
@@ -29,7 +30,7 @@ function App() {
       <Clock/>
       <MouseClicker/>
       <InteractiveWelcome/>
-      <Login func={onLogin}/>
+      <UncontrolledLogin/>
     </div>
   );
 }
