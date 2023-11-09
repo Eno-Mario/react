@@ -1,11 +1,19 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import CounterDisplay from "./CounterDisplay";
 
 function Counter({initialCounter = 0 , increment = 1 , decrement = 1}) {
     const [counter, setCounter] = useState(initialCounter)
+    const direction = useRef(null)
 
     useEffect(()=> {
-        console.log(counter)
+        let prevdirection = direction.current
+        if (counter > initialCounter) {
+            direction.current = "up"
+        } else if (counter < initialCounter) {
+            direction.current = "down"
+        } 
+
+        if (prevdirection != direction.current) console.log(direction.current)
     }, [counter])
 
     function handleCounterIncrement () {
