@@ -11,6 +11,7 @@ import Login from "./Login";
 import UncontrolledLogin from "./UncontrolledLogin";
 import FocusableInput from "./FocusableInput";
 import FirstMount from "./FirstMount";
+import Colors from "./Colors";
 
 function App() {
   function handleShowCurrentTime () {
@@ -23,18 +24,18 @@ function App() {
     console.log('Login data:', data)
   }
 
+  const persons = [
+  { name: "Alice", key: "abc" },
+  { name: "Bob", key: "def" },
+  { name: "Charlie", key: "ghi" },
+  { name: "David", key: "jkl" },
+  { name: "Eve", key: "mno" }
+];
+
   return (
     <div>
       <Hello />
-      <Message /> {/* we can render the Message component directly within the App component, if we do it we automatically import the Message component */}
-      <Hello /> {/* yes we can use component Hello more than once! */}
-      <Counter />
-      <Clock/>
-      <MouseClicker/>
-      <InteractiveWelcome/>
-      <UncontrolledLogin/>
-      <FirstMount/>
-      <FocusableInput/>
+      <Colors arr={persons}/>
     </div>
   );
 }
