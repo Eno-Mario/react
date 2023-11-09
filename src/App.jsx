@@ -9,6 +9,7 @@ import MouseClicker from "./MouseClicker";
 import InteractiveWelcome from "./InteractiveWelcome";
 import Login from "./Login";
 import UncontrolledLogin from "./UncontrolledLogin";
+import FocusableInput from "./FocusableInput";
 
 function App() {
   function handleShowCurrentTime () {
@@ -31,6 +32,7 @@ function App() {
       <MouseClicker/>
       <InteractiveWelcome/>
       <UncontrolledLogin/>
+      <FocusableInput/>
     </div>
   );
 }
