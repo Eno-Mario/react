@@ -7,7 +7,7 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Exercise 30
+## Exercise 31
 
-Modify the TodoList by adding a "remove" button to each li tag.
-When clicked, the event handler should remove corresponding item from the todos array.
+Create an index.css file and import it within the index.jsx file.
+Add a .welcome class to the Welcome component that sets its background color and adds a border.

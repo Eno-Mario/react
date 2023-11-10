@@ -15,6 +15,7 @@ import Colors from "./Colors";
 import TodoList from "./TodoList";
 
 
+
 function App() {
   function handleShowCurrentTime () {
     const time = new Date();
@@ -35,9 +36,10 @@ function App() {
 ];
 
   return (
-    <div>
+    <div >
       <Hello />
       <Colors arr={persons}/>
+      <Welcome />
       <TodoList/>
     </div>
   );
