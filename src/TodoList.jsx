@@ -1,6 +1,8 @@
 import React from 'react'
 import { useState } from 'react'
 
+import classes from "./Todolist.module.scss"
+
 export default function TodoList() {
     const [todos, setTodos] = useState(['mario']);
     const [newTodo, setNewtodo] = useState('')
@@ -24,7 +26,7 @@ export default function TodoList() {
         setTodos(t => t.filter((el, index) => index != i))
     }
   return (
-    <div>
+    <div className={classes.todo}>
         <ul>
             {todos.map((todo, index)=> <li key={index}>{todo}<button onClick={() => handleRemove(index)}>Remove</button></li>)}
         </ul>
