@@ -41,6 +41,7 @@ function App() {
       <Colors arr={persons}/>
       <Welcome />
       <TodoList/>
+      <Clock/>
     </div>
   );
 }

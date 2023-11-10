@@ -7,7 +7,6 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Exercise 31
+## Exercise 32
 
-Create an index.css file and import it within the index.jsx file.
-Add a .welcome class to the Welcome component that sets its background color and adds a border.
+Install the sass package and use SCSS to style your Clock component.
