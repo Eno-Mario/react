@@ -13,6 +13,7 @@ import FocusableInput from "./FocusableInput";
 import FirstMount from "./FirstMount";
 import Colors from "./Colors";
 import TodoList from "./TodoList";
+import Container from "./Container";
 
 
 
@@ -37,10 +38,9 @@ function App() {
 
   return (
     <div >
-      <Hello />
-      <Colors arr={persons}/>
-      <Welcome />
-      <TodoList/>
+      <Container title={"Hello World"}>
+        <Counter/>
+      </Container>
     </div>
   );
 }
