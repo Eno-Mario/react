@@ -1,6 +1,6 @@
 function MouseClicker({name="one"}) {
     function handleButtonEvent(event) {
-        if (!event.target.src) console.log(event.currentTarget.name)
+        console.log(event.target.name)
     }
 
     function handleImgEvent(event) {
