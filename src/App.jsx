@@ -15,6 +15,7 @@ import Colors from "./Colors";
 import TodoList from "./TodoList";
 import Container from "./Container";
 import GithubUser from "./GithubUser";
+import GithubUsers from "./GithubUsers";
 
 export const LanguageContext = React.createContext();
 
@@ -39,7 +40,8 @@ function App() {
         </div>
         <Clock/>
       </LanguageContext.Provider>
-      <GithubUser username={'Eno-Mario'}/>
+
+      <GithubUsers/>
     </div>
   );
 }
