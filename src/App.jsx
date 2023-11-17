@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Hello from "./Hello";
 import Message from "./Message"; /* the import created automatically */
 import Welcome from "./Welcome";
@@ -15,32 +15,29 @@ import Colors from "./Colors";
 import TodoList from "./TodoList";
 import Container from "./Container";
 
-
+export const LanguageContext = React.createContext();
 
 function App() {
-  function handleShowCurrentTime () {
-    const time = new Date();
 
-    alert(`Current time is:${time.toLocaleTimeString()}`)
+  const [selectedLanguage, setSelectedLanguage] = useState('english');
+
+  function handleLanguage(event) {
+    setSelectedLanguage(event.target.value)
   }
 
-  function onLogin(data) {
-    console.log('Login data:', data)
-  }
-
-  const persons = [
-  { name: "Alice", key: "abc" },
-  { name: "Bob", key: "def" },
-  { name: "Charlie", key: "ghi" },
-  { name: "David", key: "jkl" },
-  { name: "Eve", key: "mno" }
-];
 
   return (
     <div >
-      <Container title={"Hello World"}>
-        <Counter/>
-      </Container>
+      <LanguageContext.Provider value={selectedLanguage}>
+        <div>
+          <label>Select Language:</label>
+          <select value={selectedLanguage} onChange={handleLanguage}>
+            <option value="english">English</option>
+            <option value="italian">Italiano</option>
+          </select>
+        </div>
+        <Clock/>
+      </LanguageContext.Provider>
     </div>
   );
 }
