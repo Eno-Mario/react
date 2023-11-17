@@ -7,14 +7,20 @@ export default function useGithubUser({username}) {
 
     function fetchData() {
       setLoading(true)
+      setError(null)
 
       fetch(`https://api.github.com/users/${username}`)
-          .then((data) => data.json())
           .then((data) => {
-            setUserData(data)
-            setLoading(false)
+            if (data.status !== 200) {
+              setError(new Error)
+              return null
+            } else {
+              return data.json()
+            }
           })
+          .then((data) => setUserData(data))
           .catch((err) => setError(err))
+          .finally(() => setLoading(false))
     }
 
     useEffect(() => fetchData(), [username])
