@@ -33,7 +33,7 @@ function App() {
 
   return (
     <div >
-      <Login func={onLogin}/>
+      <GithubUsers/>
     </div>
   );
 }
