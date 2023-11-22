@@ -4,21 +4,21 @@ import Message from "./Message"; /* the import created automatically */
 import Welcome from "./Welcome";
 import AlertClock from "./AlertClock";
 import Counter from "./Counter";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
-  function handleShowCurrentTime () {
+  function handleShowCurrentTime() {
     const time = new Date();
 
-    alert(`Current time is:${time.toLocaleTimeString()}`)
+    alert(`Current time is:${time.toLocaleTimeString()}`);
   }
 
   return (
-    <div>
-      <Hello />
-      <Message /> {/* we can render the Message component directly within the App component, if we do it we automatically import the Message component */}
-      <Hello /> {/* yes we can use component Hello more than once! */}
-      <Counter />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/counter" element={<Counter />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
