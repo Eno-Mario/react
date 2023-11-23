@@ -15,32 +15,24 @@ import Colors from "./Colors";
 import TodoList from "./TodoList";
 import Container from "./Container";
 import GithubUser from "./GithubUser";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import ShowGithubUser from "./ShowGithubUser";
 
 export const LanguageContext = React.createContext();
 
 function App() {
-
-  const [selectedLanguage, setSelectedLanguage] = useState('english');
+  const [selectedLanguage, setSelectedLanguage] = useState("english");
 
   function handleLanguage(event) {
-    setSelectedLanguage(event.target.value)
+    setSelectedLanguage(event.target.value);
   }
 
-
   return (
-    <div >
-      <LanguageContext.Provider value={selectedLanguage}>
-        <div>
-          <label>Select Language:</label>
-          <select value={selectedLanguage} onChange={handleLanguage}>
-            <option value="english">English</option>
-            <option value="italian">Italiano</option>
-          </select>
-        </div>
-        <Clock/>
-      </LanguageContext.Provider>
-      <GithubUser username={'Eno-Mario'}/>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="users/:username" element={<ShowGithubUser />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

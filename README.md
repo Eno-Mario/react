@@ -7,7 +7,6 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Exercise 34
+## Exercise 43
 
-Create a GithubUser component that receives a username prop and fetches the data of the corresponding Github user from the Github API.
-The component should render the user's name, login and avatar.
+Add a new Route to the users/:username path that renders a ShowGithubUser component that receives the username as a path parameter and renders the GithubUser component from the first Data Fetching with fetch and useEffect exercise by passing it the received username.
