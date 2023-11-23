@@ -7,6 +7,6 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Exercise 44
+## Exercise 45
 
-Add three Links within the main App component and use them to navigate to all three routes.
+Add a Not Found route that renders when a user navigates to a path that does not exist.
