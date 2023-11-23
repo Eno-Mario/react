@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
 export default function GithubUserList() {
   const [usersData, setUsersData] = useState(null);
@@ -12,13 +12,17 @@ export default function GithubUserList() {
   }, []);
 
   return (
-    <ul>
-      {usersData &&
-        usersData.map((el, key) => (
-          <li key={key}>
-            <Link to={el.login}>{el.login}</Link>
-          </li>
-        ))}
-    </ul>
+    <>
+      <ul>
+        {usersData &&
+          usersData.map((el, key) => (
+            <li key={key}>
+              <Link to={el.login}>{el.login}</Link>
+            </li>
+          ))}
+      </ul>
+
+      <Outlet />
+    </>
   );
 }

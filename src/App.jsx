@@ -35,8 +35,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Welcome name="Mario" />} />
         <Route path="counter" element={<Counter />} />
-        <Route path="/users" element={<GithubUserList />} />
-        <Route path="users/:username" element={<ShowGithubUser />} />
+        <Route path="/users" element={<GithubUserList />}>
+          <Route path=":username" element={<ShowGithubUser />} />
+          <Route index element={<div>Select a Username!</div>} />
+        </Route>
         <Route path="*" element={<div>Not Found!</div>} />
       </Routes>
     </BrowserRouter>
