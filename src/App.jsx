@@ -17,6 +17,7 @@ import Container from "./Container";
 import GithubUser from "./GithubUser";
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import ShowGithubUser from "./ShowGithubUser";
+import GithubUserList from "./GithubUserList";
 
 export const LanguageContext = React.createContext();
 
@@ -30,10 +31,11 @@ function App() {
   return (
     <BrowserRouter>
       <Link to="/">Home</Link> | <Link to="/counter">Counter</Link> |
-      <Link to="/users/Eno-Mario">Github User!</Link>
+      <Link to="/users">Github Users!</Link>
       <Routes>
         <Route path="/" element={<Welcome name="Mario" />} />
         <Route path="counter" element={<Counter />} />
+        <Route path="/users" element={<GithubUserList />} />
         <Route path="users/:username" element={<ShowGithubUser />} />
         <Route path="*" element={<div>Not Found!</div>} />
       </Routes>
