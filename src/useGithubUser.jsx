@@ -18,10 +18,14 @@ export default function useGithubUser({ username }) {
     fetcher
   );
 
+  const fetchUserData = () => {
+    mutate();
+  };
+
   return {
     userData: data,
     loading: !data && !error,
     error,
-    onFetchData: mutate,
+    onFetchData: fetchUserData,
   };
 }
